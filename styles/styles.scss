@@ -1,0 +1,56 @@
+body{
+    background: linear-gradient(salmon, rgb(230, 136, 150));
+}
+
+.wrapper{
+    margin: 0 auto;
+    width: 80%;
+}
+
+h1, h2, h3{
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    text-align: center;
+}
+
+header{
+    height: 100vh;
+}
+
+.headerLogo{
+    margin: 0 auto;
+    width: 50%;
+    height: 50%;
+}
+
+header img{
+    width: 100%;
+}
+
+header h1{
+    margin-top: 40px;
+}
+
+.question{
+    border: 1px solid grey;
+    height: 50vh;
+    margin-top: 40px;
+}
+
+.question h2{
+    padding-top: 140px;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.quiz__container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.submit__container{
+    margin: 0 auto;
+}
