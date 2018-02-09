@@ -21,7 +21,7 @@ const sleepResults = [
         },
 
         {
-            name: "fishHook",
+            name: "Fish Hook",
             description: "hook, line, and sinker",
             image: "images/placeholder.png",
             value: 4
@@ -137,70 +137,72 @@ spoon.events = function() {
         }
 
         spoon.displayResults();    
+        $('input[type=submit]').attr('disabled', 'disabled');
     });
 }
 
+
 spoon.displayResults = function() {
-    for (var i = 0; i < sleepResults.length; i++) {
-        if (spoon.counter >= 1 && sleepResults[0].value === 1) {
-            $('.results').append(`<p>you got ${sleepResults[0].name}</p>`);
-            $('.results').append(`<p>${sleepResults[0].description}</p>`)
+
+        if (spoon.counter <= 1 && sleepResults[0].value === 1) {
+            $('.results').append(`<h1>you got ${sleepResults[0].name}</h1>`);
+            $('.results').append(`<h2>${sleepResults[0].description}</h2>`);
+            $('.resultsImage').append(`<img src="${sleepResults[0].image}" alt="">`)
         }
-    }
-    for (var i = 0; i < sleepResults.length; i++) {
-        if (spoon.counter === 2 && sleepResults[1].value === 2) {
-            $('.results').append(`<p>you got ${sleepResults[1].name}</p>`);
-            $('.results').append(`<p>${sleepResults[1].description}</p>`)
+
+        else if (spoon.counter === 2 && sleepResults[1].value === 2) {
+            $('.results').append(`<h1>you got ${sleepResults[1].name}</h1>`);
+            $('.results').append(`<h2>${sleepResults[1].description}</h2>`);
+            $('.resultsImage').append(`<img src="${sleepResults[0].image}" alt="">`)
         }
-    }
-    for (var i = 0; i < sleepResults.length; i++) {
-        if (spoon.counter === 3 && sleepResults[2].value === 3) {
-            $('.results').append(`<p>you got ${sleepResults[2].name}</p>`);
-            $('.results').append(`<p>${sleepResults[2].description}</p>`)
+
+        else if (spoon.counter === 3 && sleepResults[2].value === 3) {
+            $('.results').append(`<h1>you got ${sleepResults[2].name}</h1>`);
+            $('.results').append(`<h2>${sleepResults[2].description}</h2>`);
+            $('.resultsImage').append(`<img src="${sleepResults[0].image}" alt="">`)
         }
-    }
-    for (var i = 0; i < sleepResults.length; i++) {
-        if (spoon.counter === 4 && sleepResults[3].value === 4) {
-            $('.results').append(`<p>you got ${sleepResults[3].name}</p>`);
-            $('.results').append(`<p>${sleepResults[3].description}</p>`)
+
+        else if (spoon.counter === 4 && sleepResults[3].value === 4) {
+            $('.results').append(`<h1>you got ${sleepResults[3].name}</h1>`);
+            $('.results').append(`<h2>${sleepResults[3].description}</h2>`);
+            $('.resultsImage').append(`<img src="${sleepResults[0].image}" alt="">`)
+
         }
-    }
-    for (var i = 0; i < sleepResults.length; i++) {
-        if (spoon.counter === 5 && sleepResults[4].value === 5) {
-            $('.results').append(`<p>you got ${sleepResults[4].name}</p>`);
-            $('.results').append(`<p>${sleepResults[4].description}</p>`)
+        else if (spoon.counter === 5 && sleepResults[4].value === 5) {
+            $('.results').append(`<h1>you got ${sleepResults[4].name}</h1>`);
+            $('.results').append(`<h2>${sleepResults[4].description}</h2>`);
+            $('.resultsImage').append(`<img src="${sleepResults[0].image}" alt="">`)
         }
-    }
-    for (var i = 0; i < sleepResults.length; i++) {
-        if (spoon.counter === 6 && sleepResults[5].value === 6) {
-            $('.results').append(`<p>you got ${sleepResults[5].name}</p>`);
-            $('.results').append(`<p>${sleepResults[5].description}</p>`)
+
+        else if (spoon.counter === 6 && sleepResults[5].value === 6) {
+            $('.results').append(`<h1>you got ${sleepResults[5].name}</h1>`);
+            $('.results').append(`<h2>${sleepResults[5].description}</h2>`);
+            $('.resultsImage').append(`<img src="${sleepResults[0].image}" alt="">`)
         }
-    }    
-    for (var i = 0; i < sleepResults.length; i++) {
-        if (spoon.counter === 7 && sleepResults[6].value === 7) {
-            $('.results').append(`<p>you got ${sleepResults[6].name}</p>`);
-            $('.results').append(`<p>${sleepResults[6].description}</p>`)
+
+        else if (spoon.counter === 7 && sleepResults[6].value === 7) {
+            $('.results').append(`<h1>you got ${sleepResults[6].name}</h1>`);
+            $('.results').append(`<h2>${sleepResults[6].description}</h2>`);
+            $('.resultsImage').append(`<img src="${sleepResults[0].image}" alt="">`)
         }
-    }
-    for (var i = 0; i < sleepResults.length; i++) {
-        if (spoon.counter === 8 && sleepResults[7].value === 8) {
-            $('.results').append(`<p>you got ${sleepResults[7].name}</p>`);
-            $('.results').append(`<p>${sleepResults[7].description}</p>`)
+
+        else if (spoon.counter === 8 && sleepResults[7].value === 8) {
+            $('.results').append(`<h1>you got ${sleepResults[7].name}</h1>`);
+            $('.results').append(`<h2>${sleepResults[7].description}</h2>`);
+            $('.resultsImage').append(`<img src="${sleepResults[0].image}" alt="">`)
         }
-    }
-    for (var i = 0; i < sleepResults.length; i++) {
-        if (spoon.counter === 9 && sleepResults[8].value === 9) {
-            $('.results').append(`<p>you got ${sleepResults[8].name}</p>`);
-            $('.results').append(`<p>${sleepResults[8].description}</p>`)
+
+        else if (spoon.counter === 9 && sleepResults[8].value === 9) {
+            $('.results').append(`<h1>you got ${sleepResults[8].name}</h1>`);
+            $('.results').append(`<h2>${sleepResults[8].description}</h2>`);
+            $('.resultsImage').append(`<img src="${sleepResults[0].image}" alt="">`)
         }
-    }
-    for (var i = 0; i < sleepResults.length; i++) {
-        if (spoon.counter === 10 && sleepResults[9].value === 10) {
-            $('.results').append(`<p>you got ${sleepResults[9].name}</p>`);
-            $('.results').append(`<p>${sleepResults[9].description}</p>`)
+
+        else if(spoon.counter === 10 && sleepResults[9].value === 10) {
+            $('.results').append(`<h1>you got ${sleepResults[9].name}</h1>`);
+            $('.results').append(`<h2>${sleepResults[9].description}</h2>`);
+            $('.resultsImage').append(`<img src="${sleepResults[0].image}" alt="">`)
         }
-    }
 }
 
 //will initialize both spoon.events and spoon.displayResults off on page load
@@ -211,4 +213,17 @@ spoon.init = function() {
 //document ready
 $(function() {
     spoon.init();
+    $(`quiz.container`).on(`click`, function(){
+        $(this).hide();
+    });
+    $(`.reset`).on(`click`,function(e){
+        $("input:radio").each(function (i) {
+            this.checked = false;
+            console.log('false!');
+        });
+        location.reload(false);
+        $(document).ready(function(){
+            $(this).scrollTop(0);
+        });
+    });
 });

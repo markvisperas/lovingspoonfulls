@@ -10,18 +10,34 @@ body {
 
 h1, h2, h3 {
   color: white;
-  font-family: 'Nunito', sans-serif;
-  font-weight: 400;
   margin: 0;
   text-align: center; }
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 50px; }
+
+h2, h3 {
+  font-family: 'nunito', sans-serif;
+  font-weight: 100; }
+
+h2 {
+  font-size: 30px; }
+
+h3 {
+  font-size: 25px; }
 
 header {
   height: 100vh; }
 
 .headerLogo {
   margin: 0 auto;
-  width: 50%;
-  height: 50%; }
+  width: 400px;
+  height: 400px; }
+
+.start {
+  margin-top: 20px; }
 
 header img {
   width: 100%; }
@@ -31,7 +47,7 @@ header h1 {
 
 .question {
   border: 1px solid grey;
-  height: 50vh;
+  border-radius: 10px;
   margin-top: 40px; }
 
 .question h2 {
@@ -53,3 +69,22 @@ header h1 {
 
 .submit__container {
   margin: 0 auto; }
+
+.resultsImage img {
+  width: 100%; }
+
+.resultsImage {
+  height: 400px;
+  width: 400px;
+  margin: 0 auto; }
+
+button {
+  background: none;
+  padding: 15px 30px;
+  border: 1px solid white;
+  margin: 0 auto;
+  display: block; }
+
+.quest__button {
+  margin-top: 30px;
+  margin-bottom: 30px; }
