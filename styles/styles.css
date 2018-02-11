@@ -15,8 +15,8 @@ h1, h2, h3 {
 
 h1 {
   font-family: 'Playfair Display', serif;
-  font-weight: 600;
-  font-size: 50px; }
+  font-weight: 900;
+  font-size: 70px; }
 
 h2, h3 {
   font-family: 'nunito', sans-serif;
@@ -26,7 +26,7 @@ h2 {
   font-size: 30px; }
 
 h3 {
-  font-size: 25px; }
+  font-size: 20px; }
 
 header {
   height: 100vh; }
@@ -78,7 +78,7 @@ header h1 {
   width: 400px;
   margin: 0 auto; }
 
-button {
+button, input {
   background: none;
   padding: 15px 30px;
   border: 1px solid white;
@@ -88,3 +88,6 @@ button {
 .quest__button {
   margin-top: 30px;
   margin-bottom: 30px; }
+
+.active {
+  display: none; }

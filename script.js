@@ -37,35 +37,35 @@ const sleepResults = [
         {
             name: "The Classic Spoon",
             description: "Good ole classic fit",
-            image: "images/placeholder.png",
+            image: "images/classic_spoon.png",
             value: 6
         },  
 
         {
             name: "A Spork",
             description: "Poking through goes a long way",
-            image: "images/placeholder.png",
+            image: "images/spork.png",
             value: 7
         },
 
         {
             name: "Swiss Army Eagles",
             description: "Limbs everywhere but you don't care",
-            image: "images/placeholder.png",
+            image: "images/swissarmyeagles.png",
             value: 8
         },
 
         {
             name: "Gemini Hedgehogs",
             description: "cuddle match made in the heavens",
-            image: "images/placeholder.png",
+            image: "images/gemini.png",
             value: 9
         },
 
         {
             name: "Braided Croissant",
             description: "you and your partner obviously love to cuddle",
-            image: "images/placeholder.png",
+            image: "images/braidedcroissant.png",
             value: 10
         }
     ];
@@ -91,7 +91,7 @@ spoon.counter = 0;
 spoon.events = function() {
     //listening for form submission
     //will get user's selected answers
-    $('form').on('submit', function(e){
+    $('form').click('submit', function(e){
         //prevents website from refreshing after form submission
         e.preventDefault();
         const answer1 = $('input[name=q1]:checked').val();
@@ -171,37 +171,37 @@ spoon.displayResults = function() {
         else if (spoon.counter === 5 && sleepResults[4].value === 5) {
             $('.results').append(`<h1>you got ${sleepResults[4].name}</h1>`);
             $('.results').append(`<h2>${sleepResults[4].description}</h2>`);
-            $('.resultsImage').append(`<img src="${sleepResults[0].image}" alt="">`)
+            $('.resultsImage').append(`<img src="${sleepResults[4].image}" alt="">`)
         }
 
         else if (spoon.counter === 6 && sleepResults[5].value === 6) {
             $('.results').append(`<h1>you got ${sleepResults[5].name}</h1>`);
             $('.results').append(`<h2>${sleepResults[5].description}</h2>`);
-            $('.resultsImage').append(`<img src="${sleepResults[0].image}" alt="">`)
+            $('.resultsImage').append(`<img src="${sleepResults[5].image}" alt="">`)
         }
 
         else if (spoon.counter === 7 && sleepResults[6].value === 7) {
             $('.results').append(`<h1>you got ${sleepResults[6].name}</h1>`);
             $('.results').append(`<h2>${sleepResults[6].description}</h2>`);
-            $('.resultsImage').append(`<img src="${sleepResults[0].image}" alt="">`)
+            $('.resultsImage').append(`<img src="${sleepResults[6].image}" alt="">`)
         }
 
         else if (spoon.counter === 8 && sleepResults[7].value === 8) {
             $('.results').append(`<h1>you got ${sleepResults[7].name}</h1>`);
             $('.results').append(`<h2>${sleepResults[7].description}</h2>`);
-            $('.resultsImage').append(`<img src="${sleepResults[0].image}" alt="">`)
+            $('.resultsImage').append(`<img src="${sleepResults[7].image}" alt="">`)
         }
 
         else if (spoon.counter === 9 && sleepResults[8].value === 9) {
             $('.results').append(`<h1>you got ${sleepResults[8].name}</h1>`);
             $('.results').append(`<h2>${sleepResults[8].description}</h2>`);
-            $('.resultsImage').append(`<img src="${sleepResults[0].image}" alt="">`)
+            $('.resultsImage').append(`<img src="${sleepResults[8].image}" alt="">`)
         }
 
         else if(spoon.counter === 10 && sleepResults[9].value === 10) {
             $('.results').append(`<h1>you got ${sleepResults[9].name}</h1>`);
             $('.results').append(`<h2>${sleepResults[9].description}</h2>`);
-            $('.resultsImage').append(`<img src="${sleepResults[0].image}" alt="">`)
+            $('.resultsImage').append(`<img src="${sleepResults[9].image}" alt="">`)
         }
 }
 
