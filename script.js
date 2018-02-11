@@ -70,6 +70,16 @@ const sleepResults = [
         }
     ];
 
+   const array = [];
+//    $('ul#questionsList li').each(function(){
+//       array.push($(this).attr("id"));
+//    });
+//     console.log(array[0]);
+
+const ids = $('ul#questionsList li').map(function (){
+    return $(this).attr("id");
+}).get();
+console.log(ids);
 //user starts quiz by inputing one of 2 answers on the 10 questions provided.
 //user submits answers with form submit
 //Answer 1 and 2 for the 10 questions provided are given the values hot and cold respectively.
@@ -91,7 +101,21 @@ spoon.counter = 0;
 spoon.events = function() {
     //listening for form submission
     //will get user's selected answers
-    $('form').click('submit', function(e){
+    // $('.start').on('click', function(e){
+    //     e.preventDefault();
+    //     console.log('hiieeee');
+        $(".start").click(function () {
+            $('html, body').animate({
+                scrollTop: $("#quest1").offset().top
+            }, 500);
+        });
+        $(".qOne-btn").click(function () {
+            $('html, body').animate({
+                scrollTop: $("#quest2").offset().top
+            }, 500);
+        });
+   
+    $('form').on('submit', function(e){
         //prevents website from refreshing after form submission
         e.preventDefault();
         const answer1 = $('input[name=q1]:checked').val();
