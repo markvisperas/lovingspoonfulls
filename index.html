@@ -13,9 +13,9 @@
     <div class="wrapper">
         <header>
             <h1>Loving Spoonfuls</h1>
-            <h2>A sleep position generator</h2>
-            <div class="headerLogo">
-                <img src="images/bed2.png" alt="">
+            <h2>find your ideal loving sleep position</h2>
+            <div class="headerLogo slideInUp">
+                <img src="images/pillow.png" class="animated pulse" alt="">
             </div>
             <button class="start">
                 <h3>take quiz</h3>
@@ -23,32 +23,40 @@
         </header>
         <form class="quiz">
             <div class="quest1 question active" id="quest1">
-                <div class="quest__wrapper">
-                    <h2>
-                        Pick an animal
-                    </h2>
-                    <div class="quiz__container">
-                        <label for="answer1">
-                            <h3>Bear</h3>
-                        </label>
+                <div class="quest__photo">
+                    <img src="images/moon.png" alt="">
+                </div>
+                <h2>
+                    Pick an animal
+                </h2>
+                <div class="quiz__container">
+                    <label for="answer1">
+                        <h3>Bear</h3>
+                    </label>
+                    <div class="radio__circle">
                         <input type="radio" name="q1" id="" value="hot">
-                        <label for="answer2">
-                            <h3>Swan</h3>
-                        </label>
-                        <input type="radio" name="q1" id="" value="cold">
-                        <button type="button" class="quest__button qOne__btn">
-                            <h3>next question</h3>
-                        </button>
                     </div>
+                    <label for="answer2">
+                        <h3>Swan</h3>
+                    </label>
+                    <div class="radio__circle">
+                        <input type="radio" name="q1" id="" value="cold">
+                    </div>
+                    <button type="button" class="quest__button qOne__btn">
+                        <h3>next question</h3>
+                    </button>
                 </div>
             </div>
             <div class="quest2 question active" id="quest2">
+                <div class="quest__photo">
+                    <img src="images/bed2.png" alt="">
+                </div>
                 <h2>
                     On an airplane pick a seat
                 </h2>
                 <div class="quiz__container">
                     <label for="answer1">
-                        <h3>ailse seat</h3>
+                        <h3>aisle seat</h3>
                     </label>
                     <input type="radio" name="q2" id="" value="hot">
                     <label for="answer2">
@@ -61,6 +69,9 @@
                 </div>
             </div>       
             <div class="quest3 question active" id="quest3">
+                <div class="quest__photo">
+                    <img src="images/moon.png" alt="">
+                </div>
                 <h2>
                     Choose your favourite Beyonce era
                 </h2>
@@ -79,6 +90,9 @@
                 </div>
             </div>
             <div class="quest4 question active" id="quest4">
+                <div class="quest__photo">
+                    <img src="images/bed2.png" alt="">
+                </div>
                 <h2>
                     Preferred city
                 </h2>
@@ -97,6 +111,9 @@
                 </div>
             </div>
             <div class="quest5 question active" id="quest5">
+                <div class="quest__photo">
+                    <img src="images/moon.png" alt="">
+                </div>
                 <h2>
                     Which would you wear
                 </h2>
@@ -115,6 +132,9 @@
                 </div>
             </div>
             <div class="quest6 question active" id="quest6">
+                <div class="quest__photo">
+                    <img src="images/bed2.png" alt="">
+                </div>
                 <h2>
                     You share this sentiment about snoring.
                 </h2>
@@ -133,16 +153,19 @@
                 </div>
             </div>
             <div class="quest7 question active" id="quest7">
+                <div class="quest__photo">
+                    <img src="images/moon.png" alt="">
+                </div>
                 <h2>
-                    Ideal vacation spot
+                    choose your Ideal vacation
                 </h2>
                 <div class="quiz__container">
                     <label for="answer1">
-                        <h3>Bali</h3>
+                        <h3>on a beach</h3>
                     </label>
                     <input type="radio" name="q7" id="" value="hot">
                     <label for="answer2">
-                        <h3>Switzerland</h3>
+                        <h3>in a cottage</h3>
                     </label>
                     <input type="radio" name="q7" id="" value="cold">
                     <button type="button" class="quest__button qSeven__btn">
@@ -151,6 +174,9 @@
                 </div>
             </div>
             <div class="quest8 question active" id="quest8">
+                <div class="quest__photo">
+                    <img src="images/bed2.png" alt="">
+                </div>
                 <h2>
                     Pick a winter sport
                 </h2>
@@ -169,6 +195,9 @@
                 </div>
             </div>
             <div class="quest9 question active" id="quest9">
+                <div class="quest__photo">
+                    <img src="images/moon.png" alt="">
+                </div>
                 <h2>
                     Pick a character
                 </h2>
@@ -187,6 +216,9 @@
                 </div>
             </div>
             <div class="quest10 question active" id="quest10">
+                <div class="quest__photo">
+                    <img src="images/bed2.png" alt="">
+                </div>
                 <h2>
                     Pick a spot at the bar
                 </h2>
@@ -211,13 +243,13 @@
         <section class="results" id="resultsPosition">
             <div class="resultsContainer">
                 <div class="resultsImage"></div>
-                </div>
-            </butto
+            </div>
         <footer>
             <button class="reset">
                 <h3>Redo Quiz</h3>
+            </button>
         </footer>
-    </div>
+    </div><!-- to closer wrapper -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
     <script src="script.js"></script>
 </body>

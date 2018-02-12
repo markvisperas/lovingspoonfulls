@@ -1,3 +1,4 @@
+//ARRAY FOR SLEEP RESULTS
 const sleepResults = [
         {
             name: "Midnight Snacker",
@@ -28,7 +29,7 @@ const sleepResults = [
         },
 
         {
-            name: "'The Hommies'",
+            name: "'The Homies'",
             description: "back to back partners in crime",
             image: "images/05_hommies.png",
             value: 5
@@ -70,16 +71,7 @@ const sleepResults = [
         }
     ];
 
-   const array = [];
-//    $('ul#questionsList li').each(function(){
-//       array.push($(this).attr("id"));
-//    });
-//     console.log(array[0]);
-
-const ids = $('ul#questionsList li').map(function (){
-    return $(this).attr("id");
-}).get();
-console.log(ids);
+//GENERAL LAYOUT OF QUIZ 
 //user starts quiz by inputing one of 2 answers on the 10 questions provided.
 //user submits answers with form submit
 //Answer 1 and 2 for the 10 questions provided are given the values hot and cold respectively.
@@ -95,71 +87,71 @@ console.log(ids);
 //main object where the quiz functionality with live inside
 const spoon = {};
 
+//global variable to count 'HOT' points collected from .form submit
 spoon.counter = 0;
 
 //user selects and answers for quiz and submits
 spoon.events = function() {
+    
+    //.click event scrolls user from start button to following questions, and from questions to submit
+    $(".start").click(function () {
+        $('html, body').animate({
+            scrollTop: $("#quest1").offset().top
+        }, 500);
+    });
+    $(".qOne__btn").click(function () {
+        $('html, body').animate({
+            scrollTop: $("#quest2").offset().top
+        }, 500);
+    });
+    $(".qTwo__btn").click(function () {
+        $('html, body').animate({
+            scrollTop: $("#quest3").offset().top
+        }, 500);
+    });
+    $(".qThree__btn").click(function () {
+        $('html, body').animate({
+            scrollTop: $("#quest4").offset().top
+        }, 500);
+    });
+    $(".qFour__btn").click(function () {
+        $('html, body').animate({
+            scrollTop: $("#quest5").offset().top
+        }, 500);
+    });
+    $(".qFive__btn").click(function () {
+        $('html, body').animate({
+            scrollTop: $("#quest6").offset().top
+        }, 500);
+    });
+    $(".qSix__btn").click(function () {
+        $('html, body').animate({
+            scrollTop: $("#quest7").offset().top
+        }, 500);
+    });
+    $(".qSeven__btn").click(function () {
+        $('html, body').animate({
+            scrollTop: $("#quest8").offset().top
+        }, 500);
+    });
+    $(".qEight__btn").click(function () {
+        $('html, body').animate({
+            scrollTop: $("#quest9").offset().top
+        }, 500);
+    });
+    $(".qNine__btn").click(function () {
+        $('html, body').animate({
+            scrollTop: $("#quest10").offset().top
+        }, 500);
+    });
+    $(".submit").click(function () {
+        $('html, body').animate({
+            scrollTop: $("#resultsPosition").offset().top
+        }, 500);
+    });
+   
     //listening for form submission
     //will get user's selected answers
-    // $('.start').on('click', function(e){
-    //     e.preventDefault();
-    //     console.log('hiieeee');
-        $(".start").click(function () {
-            $('html, body').animate({
-                scrollTop: $("#quest1").offset().top
-            }, 500);
-        });
-        $(".qOne__btn").click(function () {
-            $('html, body').animate({
-                scrollTop: $("#quest2").offset().top
-            }, 500);
-        });
-        $(".qTwo__btn").click(function () {
-            $('html, body').animate({
-                scrollTop: $("#quest3").offset().top
-            }, 500);
-        });
-        $(".qThree__btn").click(function () {
-            $('html, body').animate({
-                scrollTop: $("#quest4").offset().top
-            }, 500);
-        });
-        $(".qFour__btn").click(function () {
-            $('html, body').animate({
-                scrollTop: $("#quest5").offset().top
-            }, 500);
-        });
-        $(".qFive__btn").click(function () {
-            $('html, body').animate({
-                scrollTop: $("#quest6").offset().top
-            }, 500);
-        });
-        $(".qSix__btn").click(function () {
-            $('html, body').animate({
-                scrollTop: $("#quest7").offset().top
-            }, 500);
-        });
-        $(".qSeven__btn").click(function () {
-            $('html, body').animate({
-                scrollTop: $("#quest8").offset().top
-            }, 500);
-        });
-        $(".qEight__btn").click(function () {
-            $('html, body').animate({
-                scrollTop: $("#quest9").offset().top
-            }, 500);
-        });
-        $(".qNine__btn").click(function () {
-            $('html, body').animate({
-                scrollTop: $("#quest10").offset().top
-            }, 500);
-        });
-        $(".submit").click(function () {
-            $('html, body').animate({
-                scrollTop: $("#resultsPosition").offset().top
-            }, 500);
-        });
-   
     $('form').on('submit', function(e){
         //prevents website from refreshing after form submission
         e.preventDefault();
@@ -174,6 +166,7 @@ spoon.events = function() {
         const answer9 = $('input[name=q9]:checked').val();
         const answer10 = $('input[name=q10]:checked').val();
         
+        //attributes value of 1 point for every time user chooses an answer with a value of hot.
         if (answer1 === 'hot') {
             spoon.counter = spoon.counter + 1;   
         }
@@ -204,13 +197,14 @@ spoon.events = function() {
         if (answer10 === 'hot') {
             spoon.counter = spoon.counter + 1;
         }
-
-        spoon.displayResults();    
+        //function to display results collected
+        spoon.displayResults(); 
+        //function prevents submit event from repeating results   
         $('input[type=submit]').attr('disabled', 'disabled');
     });
 }
 
-
+//function matches spoon.counter value to values found in sleepResults array and appends corresponding content and image to DOM.
 spoon.displayResults = function() {
 
         if (spoon.counter <= 1 && sleepResults[0].value === 1) {
@@ -282,10 +276,12 @@ spoon.init = function() {
 //document ready
 $(function() {
     spoon.init();
+    //allows user to restart quiz with .on event with .reset button.
     $(`.reset`).on(`click`,function(e){
         $("input:radio").each(function (i) {
             this.checked = false;
         });
+        //scrolls to the top when quiz is reset
         location.reload(false);
         $(document).ready(function(){
             $(this).scrollTop(0);
