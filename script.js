@@ -1,71 +1,71 @@
 const sleepResults = [
         {
             name: "Midnight Snacker",
-            description: "You would rather munch the night away",
-            image: "images/placeholder.png",
+            description: "Forget cuddling. You'd rather munch the night away",
+            image: "images/01_chips.png",
             value: 1
         },
 
         {
             name: "Western Showdown",
             description: "Theres ain't enough room for the both of us",
-            image: "images/placeholder.png",
+            image: "images/02_cowboy.png",
             value: 2
         },
 
         {
             name: "The E.T.",
             description: "So close, yet so far",
-            image: "images/placeholder.png",
+            image: "images/03_et.png",
             value: 3
         },
 
         {
             name: "Fish Hook",
             description: "hook, line, and sinker",
-            image: "images/placeholder.png",
+            image: "images/04_fishhook.png",
             value: 4
         },
 
         {
-            name: "The Hommies",
+            name: "'The Hommies'",
             description: "back to back partners in crime",
-            image: "images/placeholder.png",
+            image: "images/05_hommies.png",
             value: 5
         },
 
         {
             name: "The Classic Spoon",
             description: "Good ole classic fit",
-            image: "images/classic_spoon.png",
+            image: "images/06_classic.png",
             value: 6
         },  
 
         {
-            name: "A Spork",
-            description: "Poking through goes a long way",
-            image: "images/spork.png",
+            name: "'The Cradle'",
+            description: "proximity equals heart",
+            image: "images/07_cradle.png",
             value: 7
         },
 
         {
             name: "Swiss Army Eagles",
             description: "Limbs everywhere but you don't care",
-            image: "images/swissarmyeagles.png",
+            image: "images/08_swissarmy.png",
             value: 8
         },
 
         {
-            name: "Gemini Hedgehogs",
+            name: "Gemini Angels",
             description: "cuddle match made in the heavens",
-            image: "images/gemini.png",
+            image: "images/09_gemini.png",
             value: 9
         },
 
         {
-            name: "Braided Croissant",
+            name: "Croissant",
             description: "you and your partner obviously love to cuddle",
-            image: "images/braidedcroissant.png",
+            image: "images/10_croissant.png",
             value: 10
         }
     ];
@@ -109,9 +109,54 @@ spoon.events = function() {
                 scrollTop: $("#quest1").offset().top
             }, 500);
         });
-        $(".qOne-btn").click(function () {
+        $(".qOne__btn").click(function () {
             $('html, body').animate({
                 scrollTop: $("#quest2").offset().top
+            }, 500);
+        });
+        $(".qTwo__btn").click(function () {
+            $('html, body').animate({
+                scrollTop: $("#quest3").offset().top
+            }, 500);
+        });
+        $(".qThree__btn").click(function () {
+            $('html, body').animate({
+                scrollTop: $("#quest4").offset().top
+            }, 500);
+        });
+        $(".qFour__btn").click(function () {
+            $('html, body').animate({
+                scrollTop: $("#quest5").offset().top
+            }, 500);
+        });
+        $(".qFive__btn").click(function () {
+            $('html, body').animate({
+                scrollTop: $("#quest6").offset().top
+            }, 500);
+        });
+        $(".qSix__btn").click(function () {
+            $('html, body').animate({
+                scrollTop: $("#quest7").offset().top
+            }, 500);
+        });
+        $(".qSeven__btn").click(function () {
+            $('html, body').animate({
+                scrollTop: $("#quest8").offset().top
+            }, 500);
+        });
+        $(".qEight__btn").click(function () {
+            $('html, body').animate({
+                scrollTop: $("#quest9").offset().top
+            }, 500);
+        });
+        $(".qNine__btn").click(function () {
+            $('html, body').animate({
+                scrollTop: $("#quest10").offset().top
+            }, 500);
+        });
+        $(".submit").click(function () {
+            $('html, body').animate({
+                scrollTop: $("#resultsPosition").offset().top
             }, 500);
         });
    
@@ -169,61 +214,61 @@ spoon.events = function() {
 spoon.displayResults = function() {
 
         if (spoon.counter <= 1 && sleepResults[0].value === 1) {
-            $('.results').append(`<h1>you got ${sleepResults[0].name}</h1>`);
+            $('.results').append(`<h4>you got ${sleepResults[0].name}</h4>`);
             $('.results').append(`<h2>${sleepResults[0].description}</h2>`);
             $('.resultsImage').append(`<img src="${sleepResults[0].image}" alt="">`)
         }
 
         else if (spoon.counter === 2 && sleepResults[1].value === 2) {
-            $('.results').append(`<h1>you got ${sleepResults[1].name}</h1>`);
+            $('.results').append(`<h4>you got ${sleepResults[1].name}</h4>`);
             $('.results').append(`<h2>${sleepResults[1].description}</h2>`);
-            $('.resultsImage').append(`<img src="${sleepResults[0].image}" alt="">`)
+            $('.resultsImage').append(`<img src="${sleepResults[1].image}" alt="">`)
         }
 
         else if (spoon.counter === 3 && sleepResults[2].value === 3) {
-            $('.results').append(`<h1>you got ${sleepResults[2].name}</h1>`);
+            $('.results').append(`<h4>you got ${sleepResults[2].name}</h4>`);
             $('.results').append(`<h2>${sleepResults[2].description}</h2>`);
-            $('.resultsImage').append(`<img src="${sleepResults[0].image}" alt="">`)
+            $('.resultsImage').append(`<img src="${sleepResults[2].image}" alt="">`)
         }
 
         else if (spoon.counter === 4 && sleepResults[3].value === 4) {
-            $('.results').append(`<h1>you got ${sleepResults[3].name}</h1>`);
+            $('.results').append(`<h4>you got ${sleepResults[3].name}</h4>`);
             $('.results').append(`<h2>${sleepResults[3].description}</h2>`);
-            $('.resultsImage').append(`<img src="${sleepResults[0].image}" alt="">`)
+            $('.resultsImage').append(`<img src="${sleepResults[3].image}" alt="">`)
 
         }
         else if (spoon.counter === 5 && sleepResults[4].value === 5) {
-            $('.results').append(`<h1>you got ${sleepResults[4].name}</h1>`);
+            $('.results').append(`<h4>you got ${sleepResults[4].name}</h4>`);
             $('.results').append(`<h2>${sleepResults[4].description}</h2>`);
             $('.resultsImage').append(`<img src="${sleepResults[4].image}" alt="">`)
         }
 
         else if (spoon.counter === 6 && sleepResults[5].value === 6) {
-            $('.results').append(`<h1>you got ${sleepResults[5].name}</h1>`);
+            $('.results').append(`<h4>you got ${sleepResults[5].name}</h4>`);
             $('.results').append(`<h2>${sleepResults[5].description}</h2>`);
             $('.resultsImage').append(`<img src="${sleepResults[5].image}" alt="">`)
         }
 
         else if (spoon.counter === 7 && sleepResults[6].value === 7) {
-            $('.results').append(`<h1>you got ${sleepResults[6].name}</h1>`);
+            $('.results').append(`<h4>you got ${sleepResults[6].name}</h4>`);
             $('.results').append(`<h2>${sleepResults[6].description}</h2>`);
             $('.resultsImage').append(`<img src="${sleepResults[6].image}" alt="">`)
         }
 
         else if (spoon.counter === 8 && sleepResults[7].value === 8) {
-            $('.results').append(`<h1>you got ${sleepResults[7].name}</h1>`);
+            $('.results').append(`<h4>you got ${sleepResults[7].name}</h4>`);
             $('.results').append(`<h2>${sleepResults[7].description}</h2>`);
             $('.resultsImage').append(`<img src="${sleepResults[7].image}" alt="">`)
         }
 
         else if (spoon.counter === 9 && sleepResults[8].value === 9) {
-            $('.results').append(`<h1>you got ${sleepResults[8].name}</h1>`);
+            $('.results').append(`<h4>you got ${sleepResults[8].name}</h4>`);
             $('.results').append(`<h2>${sleepResults[8].description}</h2>`);
             $('.resultsImage').append(`<img src="${sleepResults[8].image}" alt="">`)
         }
 
         else if(spoon.counter === 10 && sleepResults[9].value === 10) {
-            $('.results').append(`<h1>you got ${sleepResults[9].name}</h1>`);
+            $('.results').append(`<h4>you got ${sleepResults[9].name}</h4>`);
             $('.results').append(`<h2>${sleepResults[9].description}</h2>`);
             $('.resultsImage').append(`<img src="${sleepResults[9].image}" alt="">`)
         }
@@ -237,13 +282,9 @@ spoon.init = function() {
 //document ready
 $(function() {
     spoon.init();
-    $(`quiz.container`).on(`click`, function(){
-        $(this).hide();
-    });
     $(`.reset`).on(`click`,function(e){
         $("input:radio").each(function (i) {
             this.checked = false;
-            console.log('false!');
         });
         location.reload(false);
         $(document).ready(function(){

@@ -23,21 +23,23 @@
         </header>
         <form class="quiz">
             <div class="quest1 question active" id="quest1">
-                <h2>
-                    Pick an animal
-                </h2>
-                <div class="quiz__container">
-                    <label for="answer1">
-                        <h3>Bear</h3>
-                    </label>
-                    <input type="radio" name="q1" id="" value="hot">
-                    <label for="answer2">
-                        <h3>Swan</h3>
-                    </label>
-                    <input type="radio" name="q1" id="" value="cold">
-                    <button type="button" class="quest__button qOne-btn">
-                        <h3>next question</h3>
-                    </button>
+                <div class="quest__wrapper">
+                    <h2>
+                        Pick an animal
+                    </h2>
+                    <div class="quiz__container">
+                        <label for="answer1">
+                            <h3>Bear</h3>
+                        </label>
+                        <input type="radio" name="q1" id="" value="hot">
+                        <label for="answer2">
+                            <h3>Swan</h3>
+                        </label>
+                        <input type="radio" name="q1" id="" value="cold">
+                        <button type="button" class="quest__button qOne__btn">
+                            <h3>next question</h3>
+                        </button>
+                    </div>
                 </div>
             </div>
             <div class="quest2 question active" id="quest2">
@@ -53,12 +55,12 @@
                         <h3>window seat</h3>
                     </label>
                     <input type="radio" name="q2" id="" value="cold">
-                        <button type="button" class="quest__button">
+                        <button type="button" class="quest__button qTwo__btn">
                             <h3>next question</h3>
                         </button>
                 </div>
             </div>       
-            <div class="quest3 question active">
+            <div class="quest3 question active" id="quest3">
                 <h2>
                     Choose your favourite Beyonce era
                 </h2>
@@ -71,12 +73,12 @@
                         <h3>Solo Debut</h3>
                     </label>
                     <input type="radio" name="q3" id="" value="cold">
-                    <button type="button" class="quest__button">
+                    <button type="button" class="quest__button qThree__btn">
                         <h3>next question</h3>
                     </button>
                 </div>
             </div>
-            <div class="quest4 question">
+            <div class="quest4 question active" id="quest4">
                 <h2>
                     Preferred city
                 </h2>
@@ -89,12 +91,12 @@
                         <h3>Pyongyang</h3>
                     </label>
                     <input type="radio" name="q4" id="" value="cold">
-                    <button type="button" class="quest__button">
+                    <button type="button" class="quest__button qFour__btn">
                         <h3>next question</h3>
                     </button>
                 </div>
             </div>
-            <div class="quest5 question">
+            <div class="quest5 question active" id="quest5">
                 <h2>
                     Which would you wear
                 </h2>
@@ -107,12 +109,12 @@
                         <h3>silk robe</h3>
                     </label>
                     <input type="radio" name="q5" id="" value="cold">
-                    <button type="button" class="quest__button">
+                    <button type="button" class="quest__button qFive__btn">
                         <h3>next question</h3>
                     </button>
                 </div>
             </div>
-            <div class="quest6 question">
+            <div class="quest6 question active" id="quest6">
                 <h2>
                     You share this sentiment about snoring.
                 </h2>
@@ -125,12 +127,12 @@
                         <h3>the devil's nose burp</h3>
                     </label>
                     <input type="radio" name="q6" id="" value="cold">
-                    <button type="button" class="quest__button">
+                    <button type="button" class="quest__button qSix__btn">
                         <h3>next question</h3>
                     </button>
                 </div>
             </div>
-            <div class="quest7 question">
+            <div class="quest7 question active" id="quest7">
                 <h2>
                     Ideal vacation spot
                 </h2>
@@ -143,12 +145,12 @@
                         <h3>Switzerland</h3>
                     </label>
                     <input type="radio" name="q7" id="" value="cold">
-                    <button type="button" class="quest__button">
+                    <button type="button" class="quest__button qSeven__btn">
                         <h3>next question</h3>
                     </button>
                 </div>
             </div>
-            <div class="quest8 question">
+            <div class="quest8 question active" id="quest8">
                 <h2>
                     Pick a winter sport
                 </h2>
@@ -161,12 +163,12 @@
                         <h3>figureskating</h3>
                     </label>
                     <input type="radio" name="q8" id="" value="cold">
-                    <button type="button" class="quest__button">
+                    <button type="button" class="quest__button qEight__btn">
                         <h3>next question</h3>
                     </button>
                 </div>
             </div>
-            <div class="quest9 question">
+            <div class="quest9 question active" id="quest9">
                 <h2>
                     Pick a character
                 </h2>
@@ -179,12 +181,12 @@
                         <h3>Boy in the Bubble</h3>
                     </label>
                     <input type="radio" name="q9" id="" value="cold">
-                    <button type="button" class="quest__button">
+                    <button type="button" class="quest__button qNine__btn">
                         <h3>next question</h3>
                     </button>
                 </div>
             </div>
-            <div class="quest10 question">
+            <div class="quest10 question active" id="quest10">
                 <h2>
                     Pick a spot at the bar
                 </h2>
@@ -198,7 +200,7 @@
                     </label>
                     <input type="radio" name="q10" id="" value="cold">
                     <div class="submit__container">
-                        <button type="submit">
+                        <button type="submit" class="submit">
                             <h3 class="submitFinal">submit</h3>
                         </button>
                         <!-- <input type="submit" value="submit" class="submitFinal"> -->
@@ -206,7 +208,7 @@
                 </div>
             </div>
         </form>
-        <section class="results">
+        <section class="results" id="resultsPosition">
             <div class="resultsContainer">
                 <div class="resultsImage"></div>
                 </div>

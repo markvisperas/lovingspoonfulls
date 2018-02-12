@@ -1,5 +1,27 @@
 body{
     background: linear-gradient(salmon, rgb(230, 136, 150));
+    // background: linear-gradient(174deg, #fa8072, #d87267, #e68896);
+    // background-size: 600% 600%;
+
+    // -webkit-animation: AnimationName 8s ease infinite;
+    // -moz-animation: AnimationName 8s ease infinite;
+    // animation: AnimationName 8s ease infinite;
+
+    // @-webkit-keyframes AnimationName {
+    //     0%{background-position:52% 0%}
+    //     50%{background-position:49% 100%}
+    //     100%{background-position:52% 0%}
+    // }
+    // @-moz-keyframes AnimationName {
+    //     0%{background-position:52% 0%}
+    //     50%{background-position:49% 100%}
+    //     100%{background-position:52% 0%}
+    // }
+    // @keyframes AnimationName {
+    //     0%{background-position:52% 0%}
+    //     50%{background-position:49% 100%}
+    //     100%{background-position:52% 0%}
+    // }
 }
 
 .wrapper{
@@ -7,15 +29,18 @@ body{
     width: 80%;
 }
 
-h1, h2, h3{
+h1, h2, h3, h4{
     color: white;
     margin: 0;
     text-align: center;
 }
 
-h1 {
+h1, h4 {
     font-family: 'Playfair Display', serif;
     font-weight: 900;
+}
+
+h1{
     font-size: 70px;
 }
 
@@ -31,6 +56,10 @@ h2{
 
 h3 {
     font-size: 20px;
+}
+
+h4 {
+    font-size: 40px;
 }
 
 header{
@@ -56,8 +85,6 @@ header h1{
 }
 
 .question{
-    border: 1px solid grey;
-    border-radius: 10px;
     margin-top: 40px;
 }
 
@@ -70,6 +97,10 @@ header h1{
     width: 60%;
     margin: 0 auto;
 }
+
+// .quest__wrapper{
+//     border: 1px solid;
+// }
 
 .quiz__container{
     display: flex;
@@ -86,9 +117,13 @@ header h1{
 }
 
 .resultsImage{
-    height: 400px;
-    width: 400px;
+    height: 550px;
+    width: 500px;
     margin: 0 auto;
+    border: 1px solid white;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 25px;
 }
 
 button, input{
@@ -97,6 +132,17 @@ button, input{
     border: 1px solid white;
     margin: 0 auto;
     display: block;
+    transition: 0.5s all ease;
+}
+
+button:hover{
+    background: rgba(184, 76, 76, 0.5);
+    margin-bottom: 10px;
+    padding: 12px;
+    box-shadow:
+    0 0 30px 15px rgba(116, 69, 69, 0.5),
+    0 0 50px 30px rgba(184, 76, 76, 0.5),
+    0 0 70px 45px rgba(224, 92, 92, 0.5);
 }
 
 .quest__button{
